@@ -284,14 +284,14 @@ Here is a sample of what the host file looks like after configuration
 2. Edit the ansible.cfg file. This can be done by running ``` nano ansible.cfg ``` Navigate to line 107 and designate a remote user name. For simplicity I used the same user name created when the VMs were setup in Azure. I also used the same user name for all VMs to keep things easy to manage.
 3. Edit the install-elk.yml file. This can be done by running ``` nano install-elk.yml ```. The following fields and modules need to be edited
 
-- "hosts:" - This needs to be changed to the group hosting the ELK stack
-- "remote_user:" - This needs to be changed to the remote user specified in the ansible.cfg file
-- Install docker.io - The "name:" field needs to be changed to "docker.io". The "state:" field needs to be changed to "present".
-- Install python3-pip - The "name:" field needs to be changed to "python3-pip". The "state:" field needs to be changed to "present".
-- Install Docker - The "name:" field needs to be changed to "docker". The "state:" field needs to be changed to "present".  
-- Use more memory - The "name: field needs to be changed to "vm.max_map_count". The "value:" field needs to be changed to '262144'. The "state:" field needs to be changed to "present". The "restart_policy:" field needs to be changed to "always",
-- Published_Ports - We need to add the following mappings. 5601:5601, 9200:9200 5044:5044,
-- Enable Service on boot - "name:" field needs to be changed to "docker". The "enabled:" field needs to be changed to "yes", 
+- ```hosts:``` - This needs to be changed to the group hosting the ELK stack
+- ```remote_user:``` - This needs to be changed to the remote user specified in the ansible.cfg file
+- ```Install docker.io``` - The ```name:``` field needs to be changed to ```docker.io```. The ```state:``` field needs to be changed to ```present```.
+- ```Install python3-pip``` - The ```name:``` field needs to be changed to ```python3-pip```. The ```state:``` field needs to be changed to ```present```.
+- ``Install Docker`` - The ```name:``` field needs to be changed to ```docker```. The ```state:``` field needs to be changed to ```present```.  
+- ```Use more memory``` - The ```name:``` field needs to be changed to ```vm.max_map_count```. The ```value:``` field needs to be changed to ```'262144'```. The ```state:``` field needs to be changed to ```present```. The ```restart_policy:``` field needs to be changed to ```always```,
+- ```Published_Ports``` - We need to add the following mappings. ```5601:5601```, ```9200:9200``` ```5044:5044```,
+- ```Enable Service on boot``` - ```name:``` field needs to be changed to ```docker```. The ```enabled:``` field needs to be changed to ```yes```, 
 
 Here is a sample of how the install-elk,yml file looks like after configuration
 
