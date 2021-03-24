@@ -45,8 +45,8 @@ The machines on the internal network are not exposed to the public Internet.
 Only the ELK machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 75.106.128.144
 
-Machines within the network can only be accessed by a local host machine.
-- This machine was accessed from my local host machine. IP address 75.106.128.144
+Machines within the network can only be accessed by the Jump-Box-Provisioner.
+- This machine was accessed from my local hostmachine. IP address 75.106.128.144
 
 A summary of the access policies in place can be found in the table below.
 
@@ -75,10 +75,13 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1 VM: 10.0.0.5
+- Web-2 VM: 10.0.0.6
+- Web-3 VM: 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Metric beat
+- File beat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
