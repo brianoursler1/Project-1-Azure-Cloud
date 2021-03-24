@@ -84,7 +84,8 @@ We have installed the following Beats on these machines:
 - File beat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Metric Beat allows collection of CPU usage, Network IO, number of containers running and memory usage.
+- File beat allows collection of SSH logins, monitoring of syslog files, sudo command usage and new users and group additions.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
