@@ -29,7 +29,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metric beat monitors Docker container hosts, images and names for memory usage, Network IO and CPU usage.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name                    | Function            | IP Address | Operating System |
 |-------------------------|---------------------|------------|------------------|
@@ -43,11 +42,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the ELK machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 75.106.128.144
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by a local host machine.
+- This machine was accessed from my local host machine. IP address 75.106.128.144
 
 A summary of the access policies in place can be found in the table below.
 
@@ -60,12 +59,15 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Ansible provides an efficienct method for configuring many VMs at once. This helps a network scale quickly while providing consistancy and reducing configuration errors that would normally be found with manual configurations.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Uses the apt module to install docker.io
+- Uses the apt module to install python3-pip
+- Uses the pip module to install the Docker module
+- Uses the docker_container module to download the elk image
+- Uses the published_ports to list the ports ELK runs on
+- Uses systemd module to enable Docker on start
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
