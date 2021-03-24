@@ -226,5 +226,15 @@ SSH into the control node and follow the steps below:
 - Update the File beat and Metric beat Playbook YAML files to include the hosts to be monitored. This can be done by changing the "Hosts:" field to webservers.
 - Run the ELK installation Playbook YAML file, and navigate to http://[enter public IP address of ELK VM]:5601/app/kibana to check that the installation worked as expected.
 
-
+### Downloading the Playbook
+1. SSH into the Jump-Box-Provisioner by running ``` ssh -i <Path to Public SSH Key> <username>@IP Address of Jump-box-provisioner ```
+2. Start docker and attach the docker run ``` sudo docker start <name of docker> ''' ''' sudo docker attach <name of docker> '''
+3. Navigate to /etc/ansible run ``` cd /etc/ansible '''
+4. While in the /etc/ansible directory use the ``` curl ``` command to pull the desired files. 
+- I saved the install-elk.yml and ansible.cfg files in /etc/ansible
+- I created a files folder in /etc/asnsible and saved filebeat-config.yml and metricbeat-config.yml in this folder.
+- I created a roles folder in /etc/ansible and saved filebeat-playbook.yml and metricbeat-playbook.yml in this folder. 
+### Editing the Playbook
+### Running the Playbook
+### Confirming Playbook Success
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
