@@ -230,7 +230,7 @@ SSH into the control node and follow the steps below:
 1. SSH into the Jump-Box-Provisioner by running ``` ssh -i <Path to Public SSH Key> <username>@IP Address of Jump-box-provisioner ```
 2. Start docker and attach the docker run ``` sudo docker start <name of docker> ``` ``` sudo docker attach <name of docker> ```
 3. Navigate to /etc/ansible run ``` cd /etc/ansible ```
-4. While in the /etc/ansible directory use the ``` curl ``` command to pull the desired files. 
+4. While in the /etc/ansible directory use the ``` curl ``` command to pull the desired files. Alternatively you can run ``` touch <filename> ``` to create a file then copy and paste the code in the file. However, this is not recommended. 
 - I saved the install-elk.yml and ansible.cfg files in /etc/ansible
 - I created a files folder in /etc/asnsible and saved filebeat-config.yml and metricbeat-config.yml in this folder.
 - I created a roles folder in /etc/ansible and saved filebeat-playbook.yml and metricbeat-playbook.yml in this folder. 
