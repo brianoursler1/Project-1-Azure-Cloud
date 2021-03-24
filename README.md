@@ -221,13 +221,10 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the ELK installation Playbook file, File beat Playbook file and Metric beat playbook file contents into .yml files located in the ansible container (/etc/ansible).
-- Update the ELK installation Playbook YAML file to include the host the ELK stack will be deployed on. This can be done by changing the "Hosts:" field.
-- Update the File beat and Metric beat Playbook YAML files to include the hosts to be monitored. This can be done by changing the "Hosts:" field.
+- Update the ansible hosts file to assign IP addresses to host groups. In this case, a "webservers" group was created containing 10.0.0.5, 10.0.0.6 and 10.0.0.7 and an "elk" machine group containing 10.1.0.4. 
+- Update the ELK installation Playbook YAML file to include the host group the ELK stack will be deployed on. This can be done by changing the "Hosts:" field to elk.
+- Update the File beat and Metric beat Playbook YAML files to include the hosts to be monitored. This can be done by changing the "Hosts:" field to webservers.
 - Run the ELK installation Playbook YAML file, and navigate to http://[enter public IP address of ELK VM]:5601/app/kibana to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
