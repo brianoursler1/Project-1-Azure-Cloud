@@ -155,19 +155,21 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name                    | Function            | IP Address | Operating System |
-|-------------------------|---------------------|------------|------------------|
-| Jump-Box-Provisioner VM | Gateway             | 10.0.0.4   | Linux Ubuntu     |
-| Web-1 VM                | DVWA Container      | 10.0.0.5   | Linux Ubuntu     |
-| Web-2 VM                | DVWA Container      | 10.0.0.6   | Linux Ubuntu     |
-| Web-3 VM                | DVWA Container      | 10.0.0.7   | Linux Ubuntu     |
-| ELK VM                  | ELK Stack Container | 10.1.0.4   | Linux Ubuntu     |
+| Name                    | Function            | IP Address              | Operating System |
+|-------------------------|---------------------|-------------------------|------------------|
+| Jump-Box-Provisioner VM | Gateway             | 10.0.0.4/52.250.65.166  | Linux Ubuntu     |
+| Web-1 VM                | DVWA Container      | 10.0.0.5/52.183.2.223   | Linux Ubuntu     |
+| Web-2 VM                | DVWA Container      | 10.0.0.6/52.183.2.223   | Linux Ubuntu     |
+| Web-3 VM                | DVWA Container      | 10.0.0.7/52.183.2.223   | Linux Ubuntu     |
+| ELK VM                  | ELK Stack Container | 10.1.0.4/137.116.34.220 | Linux Ubuntu     |
+| Load Balancer           | Load balancer       | 52.183.2.223            | NA               |
+ 
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the ELK machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 75.106.128.144
 
 Machines within the network can only be accessed by the Jump-Box-Provisioner.
@@ -175,11 +177,13 @@ Machines within the network can only be accessed by the Jump-Box-Provisioner.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name                    | Publicly Accessible | Allowed IP Addresses                                    |
+|-------------------------|---------------------|---------------------------------------------------------|
+| Jump-Box-Provisioner VM | Yes                 | 10.0.0.5, 10.0.0.6, 10.0.0.7, 10.1.0.4, 75.166.128.144  |
+| Web-1 VM                | No                  | 10.0.0.4                                                |
+| Web-2 VM                | No                  | 10.0.0.4                                                |
+| Web-3 VM                | No                  | 10.0.0.4                                                |
+| ELK VM                  | No                  | 10.0.0.4                                                |
 
 ### Elk Configuration
 
