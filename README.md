@@ -21,22 +21,23 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly redundant and available, in addition to restricting access to the network.
+- Load balancers protect availability within the network. The advantage of the jump box is that it acts as a provisioner. Therefore, the jump box provides automated, remote configuration of the web VMs. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the virtual machine and system files.
+- File beat monitors syslog events, sudo commands, SSH logins and new users and groups
+- Metric beat monitors Docker container hosts, images and names for memory usage, Network IO and CPU usage.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name                    | Function            | IP Address | Operating System |
+|-------------------------|---------------------|------------|------------------|
+| Jump-Box-Provisioner VM | Gateway             | 10.0.0.4   | Linux Ubuntu     |
+| Web-1 VM                | DVWA Container      | 10.0.0.5   | Linux Ubuntu     |
+| Web-2 VM                | DVWA Container      | 10.0.0.6   | Linux Ubuntu     |
+| Web-3 VM                | DVWA Container      | 10.0.0.7   | Linux Ubuntu     |
+| ELK VM                  | ELK Stack Container | 10.1.0.4   | Linux Ubuntu     |
 
 ### Access Policies
 
