@@ -235,6 +235,53 @@ SSH into the control node and follow the steps below:
 - I created a files folder in /etc/asnsible and saved filebeat-config.yml and metricbeat-config.yml in this folder.
 - I created a roles folder in /etc/ansible and saved filebeat-playbook.yml and metricbeat-playbook.yml in this folder. 
 ### Editing the Playbook
+1. Edit the hosts file. This can be done running ```nano <filename> ``` This host file determines how ansible speaks with the virtual machines by placing them into groups. Place the virtual machines to be monitored into a single group. These machines will be installed with metric beat and file beat in the ``` [webservers] ``` group. Place the machine that will be installed with the ELK stack in the ``` [elk] ``` group. Make sure to use the private IP addresses of these machines. At the end of the IP address include ``` ansible_python_interpreter=usr/bin/python3 ```
+Here is a sample of what the host file looks like after configuration
+
+```
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+ [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+10.0.0.7 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+##
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+```
+
 ### Running the Playbook
 ### Confirming Playbook Success
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
