@@ -286,8 +286,12 @@ Here is a sample of what the host file looks like after configuration
 
 - "hosts:" - This needs to be changed to the group hosting the ELK stack
 - "remote_user:" - This needs to be changed to the remote user specified in the ansible.cfg file
-- # Use apt module - The "name:" field needs to be changed to "docker.io". The "state:" field needs to be changed to present
-- #
+- Install docker.io - The "name:" field needs to be changed to "docker.io". The "state:" field needs to be changed to "present".
+- Install python3-pip - The "name:" field needs to be changed to "python3-pip". The "state:" field needs to be changed to "present".
+- Install Docker - The "name:" field needs to be changed to "docker". The "state:" field needs to be changed to "present".  
+- Use more memory - The "name: field needs to be changed to "vm.max_map_count". The "value:" field needs to be changed to '262144'. The "state:" field needs to be changed to "present". The "restart_policy:" field needs to be changed to "always",
+- Published_Ports - We need to add the following mappings. 5601:5601, 9200:9200 5044:5044,
+- Enable Service on boot - "name:" field needs to be changed to "docker". The "enabled:" field needs to be changed to "yes", 
 
 Here is a sample of how the install-elk,yml file looks like after configuration
 
@@ -350,7 +354,7 @@ Here is a sample of how the install-elk,yml file looks like after configuration
         name: docker
         enabled: yes
 ```
-
+4. 
 ### Running the Playbook
 ### Confirming Playbook Success
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
