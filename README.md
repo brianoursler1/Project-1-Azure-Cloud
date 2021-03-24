@@ -228,7 +228,7 @@ SSH into the control node and follow the steps below:
 
 ### Downloading the Playbook
 1. SSH into the Jump-Box-Provisioner by running ``` ssh -i <Path to Public SSH Key> <username>@IP Address of Jump-box-provisioner ```
-2. Start docker and attach the docker run ``` sudo docker start <name of docker> ''' ''' sudo docker attach <name of docker> '''
+2. Start docker and attach the docker run ``` sudo docker start <name of docker> ```  ``` sudo docker attach <name of docker> '''
 3. Navigate to /etc/ansible run ``` cd /etc/ansible '''
 4. While in the /etc/ansible directory use the ``` curl ``` command to pull the desired files. 
 - I saved the install-elk.yml and ansible.cfg files in /etc/ansible
