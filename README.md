@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](Project-1-Azure/Cloud/Virtual Machine Diagram .png)
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/2c02e2dd03177684ea59a6fea1de081818c983e3/Virtual%20Machine%20Diagram%20.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
