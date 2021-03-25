@@ -358,3 +358,9 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 1. Now that the configuration is complete, let's run the playbook. While in the ansible container run ``` ansible-playbook <path to playbook> ```. 
 ### Confirming ELK Stack Playbook Success
 1. In order to confirm the playbook is has installed correctly navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
+2. If the container is not running on the ELK VM. SSH into the VM and run ``` sudo container list -a ``` to verify the container is on. If the container is not on run ``` sudo docker start elk ```.
+### Configuring File Beat for Kibana
+1. Now that we know Kibana is working properly, it is time to add file beat to the webservers group. 
+2. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
+3. Click the "Add Log Data" button
+ 
