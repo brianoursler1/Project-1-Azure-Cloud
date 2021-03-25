@@ -12,7 +12,7 @@ ELK Installation Playbook File:
 
 Filebeat Installation Playbook File:
 
-[File beat Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/ed3ed32a462c33ab3a690e6018458388b91b03e6/filebeat-playbook.yml)
+[File Beat Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/ed3ed32a462c33ab3a690e6018458388b91b03e6/filebeat-playbook.yml)
 
 Metric Beat Installation Playbook File:
 
