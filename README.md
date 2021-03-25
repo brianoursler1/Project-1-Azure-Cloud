@@ -430,4 +430,4 @@ hosts: "10.1.0.4:5601"
 2. Navigate back to the Kibana web page. Under the System Logs page, navigate to the bottom of the page and click the check data button. 
 3. If the installation occured correctly you should see the following
  
- ![alt text]()
+ ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/8137a0bc011f69816246e5b9705886394e8602a7/System%20Logs%20Module%20Status.PNG)
