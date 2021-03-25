@@ -360,9 +360,10 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 1. In order to confirm the playbook is has installed correctly navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
 2. If the container is not running on the ELK VM. SSH into the VM and run ``` sudo container list -a ``` to verify the container is on. If the container is not on run ``` sudo docker start elk ```.
 ### Configuring File Beat for Kibana
-1. Now that we know Kibana is working properly, it is time to add file beat to the webservers group. 
-2. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
-3. Click the "Add Log Data" button
+1. Now that we know Kibana is working properly, it is time to install File beat.
+2. 
+3. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
+4. Click the "Add Log Data" button
 
 ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/9e968d1baae72583b48e0974357a6bf4031c9a63/Log%20data%20screen%20shot.PNG)
 
