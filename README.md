@@ -361,17 +361,73 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 2. If the container is not running on the ELK VM. SSH into the VM and run ``` sudo container list -a ``` to verify the container is on. If the container is not on run ``` sudo docker start elk ```.
 ### Configuring File Beat for Kibana
 1. Now that we know Kibana is working properly, it is time to install File beat.
-2. 
-3. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
-4. Click the "Add Log Data" button
+2. Edit the filbeat-config.yml file this can be done by navigating to the directory this file lives in and running ``` nano filbeat-config.yml ```
+3. Scroll to line 1106. Under ```output.elasticsearch ```, replace the IP address with your ELK machine. Make sure to use the ELK machine's private IP address.
+4. Under ``` username: ``` and ``` password: ``` specify a username and password for file beat. Your results should resemble the following:
+
+```
+output.elasticsearch
+hosts: ["10.1.0.4:9200"]
+username: brian
+password: denverbroncos
+
+```
+5. Scroll to line 1806 and specify the IP address of the ELK machine. Your results should resemble the following
+
+```
+setup.kibana
+hosts: "10.1.0.4:5601"
+
+```
+6.Now the configuration file for file beat is complete. Now we will work on the filebeat-conf.yml file
+7. Naviate to the file's directory and run ``` nano filbeat-config.yml ```
+8. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
+9. Click the "Add Log Data" button
 
 ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/9e968d1baae72583b48e0974357a6bf4031c9a63/Log%20data%20screen%20shot.PNG)
 
-4. Click "System Logs" 
+9. Click "System Logs" 
 
 ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/838e93e5b3c8431358083eea0da2163a4174f5f3/Sys%20logs%20screen%20shot.PNG)
 
-6. Click DEB and begin following the instructions by entering this information into 
+10. Click DEB and begin following the instructions by entering this information into the filebeat-config.yml 
 
 ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/f6352f28b98e506d5c6a9929f0197305c1adaa3b/Deb%20screenshot.PNG)
+
+11. Under ``` drop in filebeat.yml ```, specify the ``` src: ``` and ``` dest: ```. ``` src: ``` should equal the path to the filebeat-config.yml file. the ``` dest: ``` should be set to ``` /etc/filebeat/filebeat.yml ```.
+12. Enter ``` filebeat modules enable system```, ```filebeat setup ``` and ``` service filebeat start ``` for the commands for the remaining open fields.
+13.  Your file should look similar to the following
+
+```
+---
+- name: installing and launching filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+
+  - name: download filebeat deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+
+  - name: install filebeat deb
+    command: dpkg -i filebeat-7.6.1-amd64.deb
+
+  - name: drop in filebeat.yml
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+  - name: enable and configure system module
+    command: filebeat modules enable system
+
+  - name: setup filebeat
+    command: filebeat setup
+
+  - name: start filebeat service
+    command: service filebeat start
+```
+### Run The File Beat Playbook
+1. While in the ansible container run ``` ansible-playbook <path to playbook> ```
+2. Navigate back to the Kibana web page. Under the System Logs page, navigate to the bottom of the page and click the check data button. 
+3. If the installation occured correctly you should see the following
  
+ ![alt text]()
