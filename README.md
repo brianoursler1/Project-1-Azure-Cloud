@@ -443,4 +443,4 @@ hosts: "10.1.0.4:5601"
 
  6. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
  
- ![alt text]()
+ ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/4ac7ce06772821fa003f26fd2fda7c4e2f22911e/Metric%20Beat%20Deb.PNG)
