@@ -431,4 +431,9 @@ hosts: "10.1.0.4:5601"
  
  ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/8137a0bc011f69816246e5b9705886394e8602a7/System%20Logs%20Module%20Status.PNG)
  
- 
+ ### Configuring and Installing Metric Beat
+ 1. Navigate to Kibana
+ 2. Click the add Metrics Button
+ 3. Click Docker Metrics
+ 4. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
+ 5. 
