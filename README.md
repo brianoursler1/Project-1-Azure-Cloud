@@ -213,14 +213,14 @@ We have installed the following Beats on these machines:
 - File beat
 
 These Beats allow us to collect the following information from each machine:
-- Metric Beat allows collection of CPU usage, Network IO, number of containers running and memory usage.
+- Metric beat allows collection of CPU usage, Network IO, number of containers running and memory usage.
 - File beat allows collection of SSH logins, monitoring of syslog files, sudo command usage and new users and group additions.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the ELK installation Playbook file, File beat Playbook file and Metric beat playbook file contents into .yml files located in the ansible container (/etc/ansible).
+- Copy the ELK installation Playbook file, File beat Playbook file, Metric beat playbook files ans all configuration files contents into the ansible container (/etc/ansible).
 - Update the ansible hosts file to assign IP addresses to host groups. In this case, a "webservers" group was created containing 10.0.0.5, 10.0.0.6 and 10.0.0.7 and an "elk" machine group containing 10.1.0.4. 
 - Update the ELK installation Playbook YAML file to include the host group the ELK stack will be deployed on. This can be done by changing the "Hosts:" field to elk.
 - Update the File beat and Metric beat Playbook YAML files to include the hosts to be monitored. This can be done by changing the "Hosts:" field to webservers.
