@@ -234,7 +234,7 @@ SSH into the control node and follow the steps below:
 - I saved the install-elk.yml, ansible.cfg and host files in /etc/ansible
 - I created a files folder in /etc/asnsible and saved filebeat-config.yml and metricbeat-config.yml in this folder.
 - I created a roles folder in /etc/ansible and saved filebeat-playbook.yml and metricbeat-playbook.yml in this folder. 
-### Editing the Playbook
+### Editing the Playbook to Install the ELK Stack
 1. Edit the hosts file. This can be done running ```nano hosts ``` This host file determines how ansible speaks with the virtual machines by placing them into groups. Place the virtual machines to be monitored into a single group. These machines will be installed with metric beat and file beat in the ``` [webservers] ``` group. Place the machine that will be installed with the ELK stack in the ``` [elk] ``` group. Make sure to use the private IP addresses of these machines. At the end of the IP address include ``` ansible_python_interpreter=usr/bin/python3 ```
 Here is a sample of what the host file looks like after configuration
 
@@ -293,7 +293,7 @@ Here is a sample of what the host file looks like after configuration
 - ```Published_Ports``` - We need to add the following mappings. ```5601:5601```, ```9200:9200``` ```5044:5044```,
 - ```Enable Service on boot``` - ```name:``` field needs to be changed to ```docker```. The ```enabled:``` field needs to be changed to ```yes```, 
 
-Here is a sample of how the install-elk,yml file looks like after configuration
+Here is a sample of how the install-elk.yml file looks like after configuration
 
 ```
 ----
@@ -354,7 +354,7 @@ Here is a sample of how the install-elk,yml file looks like after configuration
         name: docker
         enabled: yes
 ```
-4. 
-### Running the Playbook
-### Confirming Playbook Success
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+### Running the Playbook to Install the ELK Stack
+1. Now that the configuration is complete, let's run the playbook. While in the ansible container run ``` ansible-playbook <path to playbook> ```. 
+### Confirming ELK Stack Playbook Success
+1. In order to confirm the playbook is has installed correctly navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
