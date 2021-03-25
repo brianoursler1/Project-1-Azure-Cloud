@@ -444,3 +444,47 @@ hosts: "10.1.0.4:5601"
  6. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
  
  ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/4ac7ce06772821fa003f26fd2fda7c4e2f22911e/Metric%20Beat%20Deb.PNG)
+ 
+ 7. Update the Metricbeat Config file that was downloaded. The changes are similar to the ones performed on File beat.
+ 8. Edit the metricbeat-playbook.yml file. The changes are very similar to the File beat playbook file. Your file should resemble the following
+ 
+```
+---
+- name: Install metric beat
+  hosts: webservers
+  become: true
+  tasks:
+    # Use command module
+  - name: Download metricbeat
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+    # Use command module
+  - name: install metricbeat
+    command: dpkg -i metricbeat-7.6.1-amd64.deb
+
+    # Use copy module
+  - name: drop in metricbeat config
+    copy:
+      src: /etc/ansible/files/metricbeat-config.yml
+      dest: /etc/metricbeat/metricbeat.yml
+
+    # Use command module
+  - name: enable and configure docker module for metric beat
+    command: metricbeat modules enable docker
+
+    # Use command module
+  - name: setup metric beat
+    command: metricbeat setup
+
+    # Use command module
+  - name: start metric beat
+    command: metricbeat -e
+
+```
+### Run Metric Beat Playbook File
+1. While in the ansible container run ``` ansible-playbook <path to playbook> ```
+### Confirm Metric Beat Playbook Success
+2. Navigate back to the Docker metrics page. At the bottom of the page click verify data. If the installation is complete you will see the following
+
+
+
