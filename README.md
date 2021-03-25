@@ -439,7 +439,7 @@ hosts: "10.1.0.4:5601"
 
  4. Click Docker Metrics
 
-![alt text]()
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/99c0a59e34fa8024450de4ef6d7e60435a6e3215/Docker%20Metrics.PNG)
 
  6. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
  
