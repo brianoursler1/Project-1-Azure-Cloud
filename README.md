@@ -6,7 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, the filebeat-playbook and metricbeat-playbook files may be used to install only certain pieces of it, such as Filebeat.
 
+ELK Installation Playbook File:
 
+[ELK Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/88f6ffc4acad5a305899c6f98295e47996339997/install-elk.yml)
 
 
 
