@@ -368,9 +368,9 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 
 4. Click "System Logs" 
 
-![alt text]()
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/838e93e5b3c8431358083eea0da2163a4174f5f3/Sys%20logs%20screen%20shot.PNG)
 
-6. Click the
+6. Click DEB and begin following the instructions by entering this information into 
 
 ![alt text]()
  
