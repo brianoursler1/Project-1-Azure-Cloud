@@ -434,6 +434,13 @@ hosts: "10.1.0.4:5601"
  ### Configuring and Installing Metric Beat
  1. Navigate to Kibana
  2. Click the add Metrics Button
- 3. Click Docker Metrics
- 4. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
- 5. 
+
+![alt text]()
+
+ 4. Click Docker Metrics
+
+![alt text]()
+
+ 6. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
+ 
+ ![alt text]()
