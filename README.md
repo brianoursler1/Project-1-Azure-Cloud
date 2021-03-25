@@ -486,5 +486,5 @@ hosts: "10.1.0.4:5601"
 ### Confirm Metric Beat Playbook Success
 2. Navigate back to the Docker metrics page. At the bottom of the page click verify data. If the installation is complete you will see the following
 
-
+ ![alt text]()
 
