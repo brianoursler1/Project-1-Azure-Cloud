@@ -372,5 +372,5 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 
 6. Click DEB and begin following the instructions by entering this information into 
 
-![alt text]()
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/f6352f28b98e506d5c6a9929f0197305c1adaa3b/Deb%20screenshot.PNG)
  
