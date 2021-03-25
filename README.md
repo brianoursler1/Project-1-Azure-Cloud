@@ -220,7 +220,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the ELK installation Playbook file, File beat Playbook file, Metric beat playbook files ans all configuration files contents into the ansible container (/etc/ansible).
+- Copy the ELK installation Playbook file, File beat Playbook file, Metric beat playbook files into the ansible container (/etc/ansible).
 - Update the ansible hosts file to assign IP addresses to host groups. In this case, a "webservers" group was created containing 10.0.0.5, 10.0.0.6 and 10.0.0.7 and an "elk" machine group containing 10.1.0.4. 
 - Update the ELK installation Playbook YAML file to include the host group the ELK stack will be deployed on. This can be done by changing the "Hosts:" field to elk.
 - Update the File beat and Metric beat Playbook YAML files to include the hosts to be monitored. This can be done by changing the "Hosts:" field to webservers.
