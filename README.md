@@ -362,9 +362,9 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 ### Configuring File Beat for Kibana
 1. Now that we know Kibana is working properly, it is time to add file beat to the webservers group. 
 2. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
-3. Click the "Add Sy" button
+3. Click the "Add Sys Logs Data" button
 
-![alt text]()
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/74bb73d1de834056d7a9e316050437ef7a1eac2a/Sys%20logs%20screen%20shot.PNG)
 
 4. Click the 
 
