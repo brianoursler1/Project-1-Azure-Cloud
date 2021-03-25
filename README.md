@@ -10,6 +10,9 @@ ELK Installation Playbook File:
 
 [ELK Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/88f6ffc4acad5a305899c6f98295e47996339997/install-elk.yml)
 
+Filebeat Installation Playbook File
+[File beat Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/ed3ed32a462c33ab3a690e6018458388b91b03e6/filebeat-playbook.yml)
+
 
 
 ### Description of the Topology
