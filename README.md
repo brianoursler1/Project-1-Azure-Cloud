@@ -247,7 +247,7 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 
 4. Click "System Logs" 
 
-![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/838e93e5b3c8431358083eea0da2163a4174f5f3/Sys%20logs%20screen%20shot.PNG)
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/370638f9a0744a81475270c7f10d3c82ca07395c/Screenshots/Sys%20logs%20screen%20shot.PNG)
 
 5. Click DEB and download the configuration file and begin following the instructions by entering this information into the filebeat-config.yml.
 
