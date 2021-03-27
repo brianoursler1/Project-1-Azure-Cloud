@@ -269,10 +269,10 @@ password: denverbroncos
 setup.kibana
 hosts: "10.1.0.4:5601"
 ```
-10. Now we need to deit the filebeat-playbook.yml file.
-11. Under ``` drop in filebeat.yml ```, specify the ``` src: ``` and ``` dest: ```. ``` src: ``` should equal the path to the filebeat-config.yml file. the ``` dest: ``` should be set to ``` /etc/filebeat/filebeat.yml ```.
-12. Enter ``` filebeat modules enable system```, ```filebeat setup ``` and ``` service filebeat start ``` for the commands for the remaining open fields.
-13.  Your file should look similar to the following
+9. Now we need to deit the filebeat-playbook.yml file.
+10. Under ``` drop in filebeat.yml ```, specify the ``` src: ``` and ``` dest: ```. ``` src: ``` should equal the path to the filebeat-config.yml file. the ``` dest: ``` should be set to ``` /etc/filebeat/filebeat.yml ```.
+11. Enter ``` filebeat modules enable system```, ```filebeat setup ``` and ``` service filebeat start ``` for the commands for the remaining open fields.
+12.  Your file should look similar to the following
 
 ```
 ---
