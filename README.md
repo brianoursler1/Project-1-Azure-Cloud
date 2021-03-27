@@ -321,7 +321,7 @@ hosts: "10.1.0.4:5601"
 
  4. Click Deb under "Getting Started". Follow the instructions to download the deb file and install metric beat.
  
- ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/4ac7ce06772821fa003f26fd2fda7c4e2f22911e/Metric%20Beat%20Deb.PNG)
+ ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/19ed4f719c8b26d378914c3ce347d5c860db9639/Screenshots/Metric%20Beat%20Deb.PNG)
  
  5. Update the Metricbeat Config file that was downloaded. The changes are similar to the ones performed on File beat. Navigate to ``` setup.kibana ``` and specify the ``` host: ``` to the ELK machine. Navigate to ``` output.elasticsearch: ```. Change the ``` hosts: ``` to the ELK machine and specify a ``` username: ``` and ``` password ```.
  6. Edit the metricbeat-playbook.yml file. The changes are very similar to the File beat playbook file. Your file should resemble the following
