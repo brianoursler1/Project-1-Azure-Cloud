@@ -313,7 +313,7 @@ hosts: "10.1.0.4:5601"
  1. Navigate to Kibana
  2. Click the add Metrics Button
 
-![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/0f5fd8f0e67e66e15d8053605b76471f7570b13a/Add%20Metric%20Data.PNG)
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/c712fd1311bd83d950deb29d011d3829d005fc5e/Screenshots/Add%20Metric%20Data.PNG)
 
  4. Click Docker Metrics
 
