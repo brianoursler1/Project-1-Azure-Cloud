@@ -1,4 +1,4 @@
-```#!/bin/bash
+#!/bin/bash
 
 #Check if script was run as root. Exit if false.
 if [ $UID -ne 0 ]; then
@@ -90,4 +90,4 @@ echo -e "\nThe permissions for sensitive /etc files: \n" >>$output
 for file in ${files[@]}; do
   ls -l $file >>$output
 done
-```
+
