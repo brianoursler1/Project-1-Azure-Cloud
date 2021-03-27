@@ -364,5 +364,5 @@ hosts: "10.1.0.4:5601"
 ### Confirm Metric Beat Playbook Success
 2. Navigate back to the Docker metrics page. At the bottom of the page click verify data. If the installation is complete you will see the following
 
- ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/429af2ede4df985b6660dc7ec3244af49fd085af/Metric%20Beat%20Module%20Status.PNG)
+ ![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/8bfaea2c6ef24843ec3b3f9ea5a070dd0e12bc26/Screenshots/Metric%20Beat%20Module%20Status.PNG)
 
