@@ -16,7 +16,7 @@ Filebeat Installation Playbook File:
 
 Metric Beat Installation Playbook File:
 
-[Metric Beat Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/bd1e2fdde529779f427a0473bd08943be52a2648/metricbeat-playbook.yml)
+[Metric Beat Installation Playbook File](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/c3ea7ca6a331fe7604ccf2ff0a4ac10c2ff8ff15/Ansible/metricbeat-playbook.yml)
 
 
 
