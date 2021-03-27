@@ -251,7 +251,7 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 
 5. Click DEB and download the configuration file and begin following the instructions by entering this information into the filebeat-config.yml.
 
-![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/f6352f28b98e506d5c6a9929f0197305c1adaa3b/Deb%20screenshot.PNG)
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/d0e614f8aac197fac076841c29fab1bef2d2e4f4/Screenshots/Deb%20screenshot.PNG)
 
 6. Scroll to line 1106. Under ```output.elasticsearch ```, replace the IP address with your ELK machine. Make sure to use the ELK machine's private IP address.
 7. Under ``` username: ``` and ``` password: ``` specify a username and password for file beat. Your results should resemble the following:
