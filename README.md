@@ -243,7 +243,7 @@ Here is a sample of how the install-elk.yml file looks like after configuration
 2. Navigate to http://[enter public IP address of ELK VM]:5601/app/kibana
 3. Click the "Add Log Data" button
 
-![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/9e968d1baae72583b48e0974357a6bf4031c9a63/Log%20data%20screen%20shot.PNG)
+![alt text](https://github.com/brianoursler1/Project-1-Azure-Cloud/blob/e774c348f38941c0868d5c4708a7244265a37618/Screenshots/Log%20data%20screen%20shot.PNG)
 
 4. Click "System Logs" 
 
